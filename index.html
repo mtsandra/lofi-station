@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <title>~ lofi station ~</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <meta name='description' content='lofi generator with AI'>
+    <meta charset="UTF-8">
+    <link rel='shortcut icon' href='./assets/lofi_cat.jpeg' type='image/jpeg'>
+    <script src='https://cdn.jsdelivr.net/npm/tone@14.7.39/build/Tone.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <link rel='stylesheet' type='text/css' href='style.css' />
+</head>
+
+<body>
+    <div id='loading' class='invisible'>
+        <img id='spinner' src='https://lofi-ai-assets.s3.amazonaws.com/images/spinner.gif'>
+    </div>
+
+
+    <div id='background'></div>
+    <div id='main-screen'>    
+    <div id="writeup">
+        <a href="https://mtsandra.github.io">how i made this</a><br>
+    </div>
+        <div id='menu-wrapper'>
+
+                
+
+            <div class='form-heading enabled'>Drums</div>
+            <form id='drums'>
+                <label>
+                    <input class='form-input' type='radio' value='waterdrop' name='drums' onchange="setDrums('waterdrop')" checked />
+                    waterdrop
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='groovy' name='drums' onchange="setDrums('groovy')" />
+                    groovy
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='bonfire' name='drums' onchange="setDrums('bonfire')" />
+                    bonfire
+                </label>
+            </form>
+            <div class='form-heading enabled'>Ambience</div>
+            <form id='natureSounds'>
+                <label>
+                    <input class='form-input' type='radio' value='wind' name='natureSounds' onchange="setNatureSounds('wind')" checked />
+                    wind
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='fireplace' name='natureSounds' onchange="setNatureSounds('fireplace')" />
+                    fireplace
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='rain' name='natureSounds' onchange="setNatureSounds('rain')" />
+                    rain
+                </label>
+            </form>
+            <div class='form-heading enabled'>Quote</div>
+            <form id='talking'>
+                <label>
+                    <input class='form-input' type='radio' value='record' name='talking' onchange="setTalking('record')" checked />
+                    "keep rolling, it will be beautiful"
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='easier' name='talking' onchange="setTalking('easier')" />
+                    "it will get easier"
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='sunrise' name='talking' onchange="setTalking('sunrise')" />
+                    "in between us"
+                </label>
+            </form>
+            <!-- #region -->
+            <div class='form-heading enabled invisible'>AI Soloist</div>
+            <form class="invisible" id='soloist'>
+                <label>
+                    <input class='form-input' type='radio' value='ai-true' name='ai' onchange="setAI('true')" />
+                    on
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='ai-false' name='ai' onchange="setAI('false')" checked />
+                    off
+                </label>
+            </form>
+            <!-- #endregion-->
+            <div id='buttons-wrapper'>
+                <button id='choose' class='button' onclick='enableChord()'>Choose A Song</button>
+                <button id='use-ai' class='button' onclick='enableAI()'>Use AI</button>
+            </div>
+            
+            
+            
+            <div class="form-heading enabled invisible" id="ai-track">AI Generated Solo Track</div>    
+            <form id="ai-track" class="invisible">
+                <label>
+                    <input class='form-input' type="radio" value="lofi_400_1" name="ai_track" onchange="setAITrack('lofi_400_1')" checked >
+                    worn tape piano
+                </label>
+                <label>
+                    <input class='form-input' type="radio" value="lofi_200_1" name="ai_track" onchange="setAITrack('lofi_200_1')" >
+                    music box
+                </label>
+                <label>
+                    <input class='form-input' type="radio" value="lofi_400_2" name="ai_track" onchange="setAITrack('lofi_400_2')" >
+                    dreamy smooth vox
+                </label>
+
+            </form>
+
+                
+
+
+            <div class='form-heading enabled invisible' id="chords">Chords</div>
+            <form id='chords' class = 'invisible'>
+                <label>
+                    <input class='form-input' type='radio' value='ylangYlang' name='chords' onchange="setChords('ylangYlang')" checked />
+                    ylang ylang
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='festin' name='chords' onchange="setChords('festin')" />
+                    la festin
+                </label>
+                <label>
+                    <input class='form-input' type='radio' value='jade' name='chords' onchange="setChords('jade')" />
+                    jade
+                </label>
+            </form>
+
+           
+                
+                
+            <div id='buttons-wrapper'>
+                <button id='start' class='button'>&#x25B7; play</button>
+                <button id='stop' class='button'>&#x25A2; stop</button>
+            </div>
+        </div>
+
+           
+        <div id='canvas'></div>
+    </div>
+</body>
+<script src='./script.js'></script>
+</html>

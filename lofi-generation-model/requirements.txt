@@ -1,0 +1,5 @@
+music21==8.1.0
+tensorflow-macos==2.11.0
+keras==2.11.0
+h5py==3.7.0
+numpy==1.23.1

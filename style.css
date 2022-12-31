@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 500;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.visible {
+    display: flex;
+}
+
+.invisible {
+    display: none;
+}
+
+.disabled {
+    color: #d2d2d2;
+}
+
+.enabled {
+    color: #fff;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/light-gray.jpeg');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinner {
+    width: 120px;
+    height: 120px;
+}
+
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/wind-1.gif');
+    background-size: cover;
+}
+
+#main-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+#writeup {
+    position: fixed;
+    top:0;
+    right: 0;
+    padding: 32px;
+}
+
+a:link {color: white;}
+a:visited {color:#d2d2d2;}
+a:hover {color: #d2d2d2;}
+
+
+
+
+#menu-wrapper {
+    padding: 32px;
+}
+
+form {
+    padding: 8px 0px;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+.form-heading {
+    padding: 8px 0px;
+}
+
+
+label {
+    margin-right: 24px;
+    max-width: 132px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    
+}
+
+input {
+    margin-right: 8px;
+}
+
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f5f5f5;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+
+    position: relative;
+    background-color: #8c7d70;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+#buttons-wrapper {
+    padding: 16px 0px;
+}
+
+
+.button {
+    
+    padding: 4px 16px;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid #a8a8a8;
+    margin-right: 24px;
+    font-size: 16px;
+    font-family:  "Lucida Console", "Courier New", monospace;
+    font-weight: 500;
+
+
+}
+
+
+
+#canvas {
+    position: fixed;
+    bottom: 0;
+    background-color: #c2b5a8;
+
+}
