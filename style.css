@@ -90,13 +90,13 @@ a:hover {color: #d2d2d2;}
 }
 
 form {
-    padding: 1vw 0px;
-    margin-bottom: 1vw;
+    padding: 0.8vw 0px;
+    margin-bottom: 0.5vw;
     display: flex;
 }
 
 .form-heading {
-    padding: 0.8vw 0px;
+    padding: 0.5vw 0px;
 }
 
 
@@ -118,8 +118,8 @@ input[type='radio']:after {
     width: 1vw;
     height: 1vw;
     border-radius: 1vw;
-    top: -2px;
-    left: -1px;
+    top: -0.1vw;
+    left: -0.1vw;
     position: relative;
     background-color: #f5f5f5;
     content: '';
