@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 1.4vw;
 }
 
 .column {
@@ -75,7 +75,7 @@ body {
     position: fixed;
     top:0;
     right: 0;
-    padding: 2vw;
+    padding: 1.5vw;
 }
 
 a:link {color: white;}
@@ -86,7 +86,7 @@ a:hover {color: #d2d2d2;}
 
 
 #menu-wrapper {
-    padding: 2vw 3vw;
+    padding: 1.5vw 3vw;
 }
 
 form {
@@ -153,7 +153,7 @@ input[type='radio']:checked:after {
     background-color: white;
     border: 2px solid #a8a8a8;
     margin-right: 1.8vw;
-    font-size: 2vw;
+    font-size: 1.4vw;
     font-family:  "Lucida Console", "Courier New", monospace;
     font-weight: 500;
 
