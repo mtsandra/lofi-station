@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: 500;
+    font-size: 1.5vw;
 }
 
 .column {
@@ -56,7 +57,7 @@ body {
     left: 0;
     z-index: 0;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background-image: url('./assets/wind-1.gif');
     background-size: cover;
 }
@@ -74,7 +75,7 @@ body {
     position: fixed;
     top:0;
     right: 0;
-    padding: 32px;
+    padding: 3vw;
 }
 
 a:link {color: white;}
@@ -85,23 +86,23 @@ a:hover {color: #d2d2d2;}
 
 
 #menu-wrapper {
-    padding: 32px;
+    padding: 3vw;
 }
 
 form {
-    padding: 8px 0px;
-    margin-bottom: 16px;
+    padding: 0.8vw 0px;
+    margin-bottom: 1vw;
     display: flex;
 }
 
 .form-heading {
-    padding: 8px 0px;
+    padding: 0.8vw 0px;
 }
 
 
 label {
-    margin-right: 24px;
-    max-width: 132px;
+    margin-right: 3vw;
+    max-width: 10vw;
     display: flex;
     align-items: center;
     color: #fff;
@@ -109,13 +110,14 @@ label {
 }
 
 input {
-    margin-right: 8px;
+    margin-right: 1vw;
+    max-width: 1vw;
 }
 
 input[type='radio']:after {
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 1vw;
     top: -2px;
     left: -1px;
     position: relative;
@@ -127,8 +129,8 @@ input[type='radio']:after {
 }
 
 input[type='radio']:checked:after {
-    width: 10px;
-    height: 10px;
+    width: 1vw;
+    height: 1vw;
     border-radius: 10px;
 
     position: relative;
@@ -140,18 +142,18 @@ input[type='radio']:checked:after {
 }
 
 #buttons-wrapper {
-    padding: 16px 0px;
+    padding: 1.5vw 0px;
 }
 
 
 .button {
     
-    padding: 4px 16px;
-    border-radius: 4px;
+    padding: 0.5vw 1.5vw;
+    border-radius: 0.5vw;
     background-color: white;
     border: 2px solid #a8a8a8;
-    margin-right: 24px;
-    font-size: 16px;
+    margin-right: 1.8vw;
+    font-size: 1.5vw;
     font-family:  "Lucida Console", "Courier New", monospace;
     font-weight: 500;
 
